@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-primary: #FF4D00;
+  --color-primary-hover: #E64500;
+  --color-dark: #0A0A0A;
+  --color-dark-light: #1A1A1A;
+  --color-dark-lighter: #252525;
+}
+
+body {
+  @apply bg-dark text-white font-sans antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display font-bold;
+}
+
+.ant-btn-primary {
+  @apply bg-primary hover:!bg-primary-hover border-none shadow-lg shadow-primary/20 transition-all active:scale-95;
+}
+
+.glass-morphism {
+  @apply bg-dark/80 backdrop-blur-xl border-b border-white/10;
+}
+
+.card-dark {
+  @apply bg-dark-light border border-white/5 rounded-2xl hover:border-primary/30 transition-all duration-300;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400;
+}
+
+/* Ant Design Overrides & Custom Theme Classes */
+.custom-dark-input {
+  @apply bg-white/5! border-white/10! text-white! placeholder:text-gray-600!;
+}
+.custom-dark-input:hover, .custom-dark-input:focus {
+  @apply border-primary! bg-white/10!;
+}
+
+.custom-dark-select .ant-select-selector {
+  @apply bg-white/5! border-white/10! text-white! h-14! px-4! items-center! rounded-md!;
+}
+.custom-dark-select.ant-select-focused .ant-select-selector {
+  @apply border-primary! shadow-none!;
+}
+.custom-dark-select .ant-select-selection-placeholder {
+  @apply text-gray-600!;
+}
+.custom-dark-select .ant-select-arrow {
+  @apply text-gray-500!;
+}
+
+.custom-dark-input-number {
+  @apply bg-white/5! border-white/10! text-white! rounded-md!;
+}
+.custom-dark-input-number .ant-input-number-handler-wrap {
+  @apply bg-black! border-l-white/10!;
+}
+.custom-dark-input-number .ant-input-number-handler-up, 
+.custom-dark-input-number .ant-input-number-handler-down {
+  @apply border-white/10!;
+}
+.custom-dark-input-number .ant-input-number-handler-up:hover, 
+.custom-dark-input-number .ant-input-number-handler-down:hover {
+  @apply text-primary!;
+}
+
+.custom-dark-tabs .ant-tabs-nav {
+  @apply border-white/5! mb-10!;
+}
+.custom-dark-tabs .ant-tabs-tab {
+  @apply text-gray-500! border-none! transition-all!;
+}
+.custom-dark-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
+  @apply text-primary! font-black!;
+}
+.custom-dark-tabs .ant-tabs-ink-bar {
+  @apply bg-primary! h-1! rounded-full!;
+}
+
+.custom-dark-radio-group .ant-radio-button-wrapper {
+  @apply bg-white/5! border-white/10! text-gray-400! h-12! px-6! flex! items-center! justify-center!;
+}
+.custom-dark-radio-group .ant-radio-button-wrapper-checked {
+  @apply bg-primary! border-primary! text-white! font-black!;
+}
+.custom-dark-radio-group .ant-radio-button-wrapper:hover {
+  @apply text-primary!;
+}
+
+.custom-dark-radio .ant-radio-inner {
+  @apply bg-black! border-white/10!;
+}
+.custom-dark-radio .ant-radio-checked .ant-radio-inner {
+  @apply bg-primary! border-primary!;
+}
+
+.custom-dark-rate {
+  @apply text-primary!;
+}
+
+.custom-breadcrumb .ant-breadcrumb-separator {
+  @apply text-gray-700!;
+}
+
+.custom-dark-checkbox .ant-checkbox-inner {
+  @apply bg-black! border-white/10!;
+}
+.custom-dark-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+  @apply bg-primary! border-primary!;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20;
+}
