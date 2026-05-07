@@ -165,13 +165,13 @@ export const Footer: React.FC = () => {
               Nâng tầm đam mê thể thao với trang bị chuyên nghiệp.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="p-2 bg-white/5 hover:bg-primary transition-all rounded-lg">
+              <a href="https://www.facebook.com/lzthanh.311/" className="p-2 bg-white/5 hover:bg-primary transition-all rounded-lg">
                 <Facebook size={18} className="text-gray-400 hover:text-white" />
               </a>
-              <a href="#" className="p-2 bg-white/5 hover:bg-primary transition-all rounded-lg">
+              <a href="https://www.instagram.com/haht_nv31" className="p-2 bg-white/5 hover:bg-primary transition-all rounded-lg">
                 <Instagram size={18} className="text-gray-400 hover:text-white" />
               </a>
-              <a href="#" className="p-2 bg-white/5 hover:bg-primary transition-all rounded-lg">
+              <a href="https://x.com/?lang=vi" className="p-2 bg-white/5 hover:bg-primary transition-all rounded-lg">
                 <Twitter size={18} className="text-gray-400 hover:text-white" />
               </a>
             </div>
